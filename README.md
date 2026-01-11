@@ -36,6 +36,56 @@ The system is composed of three layers:
 
 ---
 
+## Highlights / Key Technical Features
+
+- **Dynamic echo waiting**
+  - The Arduino firmware does not use a fixed blocking delay.
+  - Echo wait time is dynamically bounded, allowing **fast returns at short distances** while still supporting **accurate long-range measurements**.
+  - This maximizes sweep speed without sacrificing precision.
+
+- **True 180° continuous sweep**
+  - Servo movement is monotonic with direction tracking.
+  - Direction changes are detected on the backend to delimit **complete sweeps** reliably.
+
+- **Per-angle state model**
+  - One distance value per degree (0–180).
+  - Constant-time updates and rendering.
+  - No frame-based recomputation or resampling.
+
+- **Sweep-aware data streaming**
+  - Backend emits:
+    - single-point updates (low latency),
+    - full sweep snapshots (coherent frames),
+    - sweep boundary events.
+  - Enables heatmaps and temporal analysis without guesswork.
+
+- **Low-latency real-time transport**
+  - Uses **Server-Sent Events (SSE)** instead of polling or WebSockets.
+  - Stateless, efficient, and browser-native.
+
+- **Optional EMA smoothing**
+  - Exponential Moving Average per angle.
+  - Reduces ultrasonic noise while preserving spatial structure.
+
+- **Multiple synchronized views**
+  - Radar (geometric accuracy).
+  - Heatmap (temporal persistence).
+  - Radial 3D bars (depth perception).
+
+- **Distance-coded color pipeline**
+  - Unified color logic across all views.
+  - Near/far separation is immediately readable.
+
+- **Zero build, zero framework frontend**
+  - Single HTML page.
+  - No bundler, no transpilation, no dependencies.
+
+- **Sensor-agnostic architecture**
+  - Serial protocol and backend logic are generic.
+  - Can be reused with LiDAR, ToF, IR, or RF ranging sensors with minimal changes.
+ 
+---
+
 ## Visualizations
 
 - **Radar**: current sweep with distance-coded colors.
