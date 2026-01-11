@@ -85,3 +85,8 @@ python3 sonar_aframe.py --port /dev/ttyACM0 --baud 115200 --http 8000
 
 Open the dashboard using your browser: http://127.0.0.1:8000
 
+---
+
+## LICENSE
+
+ CC BY 4.0
