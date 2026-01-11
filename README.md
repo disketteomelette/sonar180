@@ -4,8 +4,10 @@ Great precission and compact end-to-end ultrasonic scanning system that performs
 
 
 ## Overview
+
 ![Ultrasonic sonar a-frame demo](sonarcaptura.png)
 ![Ultrasonic sonar a-frame demo](sonaraframe.png)
+
 The system is composed of three layers:
 
 1. **Arduino firmware**
