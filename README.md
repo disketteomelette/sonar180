@@ -79,9 +79,11 @@ Wiring:
 - Keep conected to PC to use serial port
 - Run one of the python servers:
 
-python3 sonar.py --port /dev/ttyACM0 --baud 115200 --http 8000
+`python3 sonar.py --port /dev/ttyACM0 --baud 115200 --http 8000`
+
 or
-python3 sonar_aframe.py --port /dev/ttyACM0 --baud 115200 --http 8000
+
+`python3 sonar_aframe.py --port /dev/ttyACM0 --baud 115200 --http 8000`
 
 (Adjust the serial port if needed, e.g. COM3 on Windows.)
 
