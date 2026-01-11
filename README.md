@@ -1,10 +1,11 @@
 # sonar180
 Great precission and compact end-to-end ultrasonic scanning system that performs a 180° sweep, streams distance data in real time, and renders it live in the browser as a radar, heatmap, and radial 3D visualization.
 ![Ultrasonic sonar demo](sonarvideo.gif)
-![Ultrasonic sonar a-frame demo](sonaraframe.png)
+
 
 ## Overview
-
+![Ultrasonic sonar a-frame demo](sonarcaptura.png)
+![Ultrasonic sonar a-frame demo](sonaraframe.png)
 The system is composed of three layers:
 
 1. **Arduino firmware**
